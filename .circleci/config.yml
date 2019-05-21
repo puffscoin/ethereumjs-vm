@@ -1,7 +1,7 @@
 version: 2
 
 defaults: &defaults
-  working_directory: ~/project/ethereumjs-vm
+  working_directory: ~/project/puffscoinjs-vm
   docker:
     - image: circleci/node:8-browsers
 restore_node_modules: &restore_node_modules
@@ -27,7 +27,7 @@ jobs:
       - persist_to_workspace:
           root: ~/project
           paths:
-            - ethereumjs-vm/
+            - puffscoinjs-vm/
   lint:
     <<: *defaults
     steps:
