@@ -72,14 +72,14 @@ Type: [Function][28]
 
 -   `error` **[Error][32]** an error that may have happened or `null`
 -   `results` **[Object][33]** 
-    -   `results.amountSpent` **BN** the amount of ether used by this transaction as a `bignum`
+    -   `results.amountSpent` **BN** the amount of PUFFScoin used by this transaction as a `bignum`
     -   `results.gasUsed` **BN** the amount of gas as a `bignum` used by the transaction
     -   `results.gasRefund` **BN** the amount of gas as a `bignum` that was refunded during the transaction (i.e. `gasUsed = totalGasConsumed - gasRefund`)
 -   `vm` **[VM][35]** contains the results from running the code, if any, as described in `vm.runCode(params, cb)`
 
 ## vm.runTx
 
-Process a transaction. Run the vm. Transfers eth. Checks balances.
+Process a transaction. Run the vm. Transfers puffs. Checks balances.
 
 ### Parameters
 
@@ -121,7 +121,7 @@ Runs EVM code
     -   `opts.data` **[Buffer][43]** the input data
     -   `opts.gasLimit` **[Buffer][43]** the gas limit for the code
     -   `opts.origin` **[Buffer][43]** the address where the call originated from. The address should be a `Buffer` of 20bits. Defaults to `0`
-    -   `opts.value` **[Buffer][43]** the value in ether that is being sent to `opt.address`. Defaults to `0`
+    -   `opts.value` **[Buffer][43]** the value in PUFFScoin that is being sent to `opt.address`. Defaults to `0`
     -   `opts.pc` **[Number][40]** the initial program counter. Defaults to `0`
 -   `cb` **[runCode~callback][44]** callback
 
@@ -255,11 +255,11 @@ Type: [Object][33]
 
 [26]: #properties-4
 
-[27]: https://github.com/ethereum/ethereumjs-blockchain
+[27]: https://github.com/puffscoin/puffscoinjs-blockchain
 
 [28]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
 
-[29]: https://github.com/ethereumjs/ethereumjs-block
+[29]: https://github.com/puffscoin/puffscoinjs-block
 
 [30]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
@@ -273,7 +273,7 @@ Type: [Object][33]
 
 [35]: #vm
 
-[36]: https://github.com/ethereum/ethereumjs-tx
+[36]: https://github.com/puffscoin/puffscoinjs-tx
 
 [37]: #runtxcallback
 
@@ -285,10 +285,10 @@ Type: [Object][33]
 
 [41]: https://git.io/vxZkK
 
-[42]: https://github.com/ethereumjs/ethereumjs-account
+[42]: https://github.com/puffscoin/puffscoinjs-account
 
 [43]: https://nodejs.org/api/buffer.html
 
 [44]: #runcodecallback
 
-[45]: https://github.com/ethereum/ethereumjs-account
+[45]: https://github.com/puffscoin/puffscoinjs-account
