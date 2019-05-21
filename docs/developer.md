@@ -101,7 +101,7 @@ All/most State tests are replicated as Blockchain tests in a ``GeneralStateTests
 
 Other client implementations often also provide functionality for output trace information.
 
-A convenient way is to use a local ``geth`` installation (can be the binary installation and doesn't has to be build from source or something) and then use the included ``evm`` tool like:
+A convenient way is to use a local ``gpuffs`` installation (can be the binary installation and doesn't has to be build from source or something) and then use the included ``evm`` tool like:
 
 ```shell
 evm --json --nomemory statetest node_modules/ethereumjs-testing/tests/GeneralStateTests/stCreate2/create2collisionCode2.json
