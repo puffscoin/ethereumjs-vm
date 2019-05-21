@@ -1,15 +1,8 @@
 # SYNOPSIS
 
-[![NPM Package](https://img.shields.io/npm/v/ethereumjs-vm.svg?style=flat-square)](https://www.npmjs.org/package/ethereumjs-vm)
-[![Build Status](
-https://img.shields.io/circleci/project/github/ethereumjs/ethereumjs-vm/master.svg
-)](https://circleci.com/gh/ethereumjs/ethereumjs-vm)
-[![Coverage Status](https://img.shields.io/coveralls/ethereumjs/ethereumjs-vm.svg?style=flat-square)](https://coveralls.io/r/ethereumjs/ethereumjs-vm)
-[![Gitter](https://img.shields.io/gitter/room/ethereum/ethereumjs.svg?style=flat-square)](https://gitter.im/ethereum/ethereumjs)
-
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-Implements Ethereum's VM in Javascript.
+Implements PUFFScoin's VM in Javascript.
 
 #### Fork Support
 
@@ -19,14 +12,13 @@ The VM currently supports the following hardfork rules:
 - `Constantinople`
 - `Petersburg` (default)
 
-If you are still looking for a [Spurious Dragon](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-607.md) compatible version of this library install the latest of the ``2.2.x`` series (see [Changelog](./CHANGELOG.md)).
 
 # INSTALL
-`npm install ethereumjs-vm`
+`npm install puffscoinjs-vm`
 
 # USAGE
 ```javascript
-var VM = require('ethereumjs-vm')
+var VM = require('puffscoinjs-vm')
 
 //create a new VM instance
 var vm = new VM()
@@ -45,7 +37,7 @@ Also more examples can be found here
 
 # BROWSER
 
-To build for standalone use in the browser, install `browserify` and check [run-transactions-simple example](https://github.com/ethereumjs/ethereumjs-vm/tree/master/examples/run-transactions-simple). This will give you a global variable `EthVM` to use. The generated file will be at `./examples/run-transactions-simple/build.js`.
+To build for standalone use in the browser, install `browserify` and check [run-transactions-simple example](https://github.com/puffscoin/puffscoinjs-vm/tree/master/examples/run-transactions-simple). This will give you a global variable `PuffsVM` to use. The generated file will be at `./examples/run-transactions-simple/build.js`.
 
 # API
 
@@ -55,7 +47,7 @@ For documentation on ``VM`` instantiation, exposed API and emitted ``events`` se
 
 ## StateManger
 
-The API for the ``StateManager`` is currently in ``Beta``, separate documentation can be found [here](./docs/stateManager.md), see also [release notes](https://github.com/ethereumjs/ethereumjs-vm/releases/tag/v2.5.0) from the ``v2.5.0`` VM release for details on the ``StateManager`` rewrite.
+The API for the ``StateManager`` is currently in ``Beta``, separate documentation can be found [here](./docs/stateManager.md), see also [release notes](https://github.com/puffscoin/puffscoinjs-vm/releases/tag/v2.5.0) from the ``v2.5.0`` VM release for details on the ``StateManager`` rewrite.
 
 # Internal Structure
 The VM processes state changes at many levels.
