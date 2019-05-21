@@ -4,7 +4,7 @@
 
 ### Running Tests
 
-Tests can be found in the ``tests`` directory, with ``FORK_CONFIG`` set in ``tests/tester.js``. There are test runners for [State tests](http://www.ethdocs.org/en/latest/contracts-and-transactions/ethereum-tests/state_tests/index.html) and [Blockchain tests](http://www.ethdocs.org/en/latest/contracts-and-transactions/ethereum-tests/blockchain_tests/index.html). VM tests are disabled since Frontier gas costs are not supported any more. Tests are then executed by the [ethereumjs-testing](https://github.com/ethereumjs/ethereumjs-testing) utility library using the official client-independent [Ethereum tests](https://github.com/ethereum/tests).
+Tests can be found in the ``tests`` directory, with ``FORK_CONFIG`` set in ``tests/tester.js``. There are test runners for [State tests](http://www.ethdocs.org/en/latest/contracts-and-transactions/ethereum-tests/state_tests/index.html) and [Blockchain tests](http://www.ethdocs.org/en/latest/contracts-and-transactions/ethereum-tests/blockchain_tests/index.html). VM tests are disabled since Frontier gas costs are not supported any more. Tests are then executed by the [puffscoinjs-testing](https://github.com/puffscoin/puffscoinjs-testing) utility library using the official client-independent [Ethereum tests](https://github.com/ethereum/tests).
 
 For a wider picture about how to use tests to implement EIPs you can have a look at this [reddit post](https://www.reddit.com/r/ethereum/comments/6kc5g3/ethereumjs_team_is_seeking_contributors/)
 or the associated YouTube video introduction to [core development with Ethereumjs-vm](https://www.youtube.com/watch?v=L0BVDl6HZzk&feature=youtu.be).
@@ -104,7 +104,7 @@ Other client implementations often also provide functionality for output trace i
 A convenient way is to use a local ``gpuffs`` installation (can be the binary installation and doesn't has to be build from source or something) and then use the included ``evm`` tool like:
 
 ```shell
-evm --json --nomemory statetest node_modules/ethereumjs-testing/tests/GeneralStateTests/stCreate2/create2collisionCode2.json
+evm --json --nomemory statetest node_modules/puffscoinjs-testing/tests/GeneralStateTests/stCreate2/create2collisionCode2.json
 ```
 
 If you want to have only the output for a specific fork you can go into the referenced json test file and temporarily delete the ``post`` section for the non-desired fork outputs (or, more safe and also more convenient on triggering later: copy the test files you are interested in to your working directory and then modify without further worrying).
