@@ -64,7 +64,7 @@ state trie
 
 ### getAccount
 
-Gets the [`ethereumjs-account`][55]
+Gets the [`puffscoinjs-account`][55]
 associated with `address`. Returns an empty account if the account does not exist.
 
 #### Parameters
@@ -74,13 +74,13 @@ associated with `address`. Returns an empty account if the account does not exis
 
 ### putAccount
 
-Saves an [`ethereumjs-account`][55]
+Saves an [`puffscoinjs-account`][55]
 into state under the provided `address`
 
 #### Parameters
 
 -   `address` **[Buffer][56]** Address under which to store `account`
--   `account` **Account** The [`ethereumjs-account`][55] to store
+-   `account` **Account** The [`puffscoinjs-account`][55] to store
 -   `cb` **[Function][58]** Callback function
 
 ### putContractCode
@@ -196,8 +196,7 @@ checkpoints on the instance.
 
 ### accountIsEmpty
 
-Checks if the `account` corresponding to `address` is empty as defined in
-EIP-161 ([https://github.com/ethereum/EIPs/blob/master/EIPS/eip-161.md][61])
+Checks if the `account` corresponding to `address` is empty
 
 #### Parameters
 
@@ -206,8 +205,7 @@ EIP-161 ([https://github.com/ethereum/EIPs/blob/master/EIPS/eip-161.md][61])
 
 ### cleanupTouchedAccounts
 
-Removes accounts form the state trie that have been touched,
-as defined in EIP-161 ([https://github.com/ethereum/EIPs/blob/master/EIPS/eip-161.md][61]).
+Removes accounts form the state trie that have been touched.
 
 #### Parameters
 
@@ -265,7 +263,7 @@ Type: [Function][58]
 ### Parameters
 
 -   `error` **[Error][68]** an error that may have happened or `null`
--   `account` **Account** An [`ethereumjs-account`][55]
+-   `account` **Account** An [`puffscoinjs-account`][55]
     instance corresponding to the provided `address`
 
 ## getContractCode~callback
@@ -449,7 +447,7 @@ Type: [Function][58]
 
 [54]: #parameters-25
 
-[55]: https://github.com/ethereumjs/ethereumjs-account
+[55]: https://github.com/puffscoin/puffscoinjs-account
 
 [56]: https://nodejs.org/api/buffer.html
 
@@ -467,9 +465,9 @@ Type: [Function][58]
 
 [63]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object
 
-[64]: https://github.com/ethereumjs/ethereumjs-common
+[64]: https://github.com/puffscoin/puffscoinjs-common
 
-[65]: https://github.com/ethereumjs/merkle-patricia-tree
+[65]: https://github.com/puffscoin/merkle-patricia-tree
 
 [66]: #dumpstoragecallback
 
