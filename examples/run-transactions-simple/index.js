@@ -1,5 +1,5 @@
 /*
- * Example - Running code on an ethereum-vm
+ * Example - Running code on a puffscoin-vm
  *
  *
  * To run this example in the browser, bundle this file
