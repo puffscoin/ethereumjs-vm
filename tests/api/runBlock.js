@@ -1,9 +1,9 @@
 const promisify = require('util.promisify')
 const tape = require('tape')
-const Block = require('ethereumjs-block')
-const Transaction = require('ethereumjs-tx')
-const Common = require('ethereumjs-common').default
-const util = require('ethereumjs-util')
+const Block = require('puffscoinjs-block')
+const Transaction = require('puffscoinjs-tx')
+const Common = require('puffscoinjs-common').default
+const util = require('puffscoinjs-util')
 const runBlock = require('../../lib/runBlock')
 const { StateManager } = require('../../lib/state')
 const runTx = require('../../lib/runTx')
