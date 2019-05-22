@@ -1,7 +1,7 @@
-const Block = require('ethereumjs-block')
-const Account = require('ethereumjs-account')
+const Block = require('puffscoinjs-block')
+const Account = require('puffscoinjs-account')
 const level = require('level-mem')
-const Blockchain = require('ethereumjs-blockchain')
+const Blockchain = require('puffscoinjs-blockchain')
 const VM = require('../../lib/index')
 
 function createGenesis (opts = {}) {
