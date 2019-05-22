@@ -1,7 +1,7 @@
 const promisify = require('util.promisify')
 const tape = require('tape')
 const Trie = require('merkle-patricia-tree/secure.js')
-const Account = require('ethereumjs-account')
+const Account = require('puffscoinjs-account')
 const Cache = require('../../../lib/state/cache')
 const utils = require('../utils')
 
