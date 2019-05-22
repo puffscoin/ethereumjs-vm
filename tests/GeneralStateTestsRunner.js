@@ -1,9 +1,9 @@
 const async = require('async')
 const testUtil = require('./util')
 const Trie = require('merkle-patricia-tree/secure')
-const ethUtil = require('ethereumjs-util')
-const Account = require('ethereumjs-account')
-const BN = ethUtil.BN
+const puffsUtil = require('puffscoinjs-util')
+const Account = require('puffscoinjs-account')
+const BN = puffsUtil.BN
 const { getRequiredForkConfigAlias } = require('./util')
 
 function parseTestCases (forkConfig, testData, data, gasLimit, value) {
