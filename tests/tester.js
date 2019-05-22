@@ -2,7 +2,7 @@
 
 const argv = require('minimist')(process.argv.slice(2))
 const tape = require('tape')
-const testing = require('ethereumjs-testing')
+const testing = require('puffscoinjs-testing')
 const FORK_CONFIG = argv.fork || 'Petersburg'
 const {
   getRequiredForkConfigAlias
@@ -55,7 +55,7 @@ const skipSlow = [
 ]
 
 /*
-NOTE: VM tests have been disabled since they are generated using Frontier gas costs, and ethereumjs-vm doesn't support historical fork rules
+NOTE: VM tests have been disabled since they are generated using Frontier gas costs, and puffscoinjs-vm doesn't support historical fork rules
 
 TODO: some VM tests do not appear to be executing (don't print an "ok" statement):
 ...
