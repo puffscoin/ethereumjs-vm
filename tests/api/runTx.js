@@ -1,7 +1,7 @@
 const promisify = require('util.promisify')
 const tape = require('tape')
-const Transaction = require('ethereumjs-tx')
-const ethUtil = require('ethereumjs-util')
+const Transaction = require('puffscoinjs-tx')
+const puffsUtil = require('puffscoinjs-util')
 const runTx = require('../../lib/runTx')
 const { StateManager } = require('../../lib/state')
 const VM = require('../../lib/index')
@@ -92,7 +92,7 @@ tape('should fail when account balance overflows', async t => {
 
   const tx = getTransaction(true, true, '0x01')
   const from = createAccount()
-  const to = createAccount('0x00', ethUtil.MAX_INTEGER)
+  const to = createAccount('0x00', puffsUtil.MAX_INTEGER)
   await suite.putAccount(tx.from.toString('hex'), from)
   await suite.putAccount(tx.to, to)
 
@@ -107,7 +107,7 @@ tape('should fail when account balance overflows', async t => {
 // The following test tries to verify that running a tx
 // would work, even when stateManager is not using a cache.
 // It fails at the moment, and has been therefore commented.
-// Please refer to https://github.com/ethereumjs/ethereumjs-vm/issues/353
+// Please refer to https://github.com/puffscoin/puffscoinjs-vm/issues/353
 /* tape('should behave the same when not using cache', async (t) => {
   const suite = setup()
 
