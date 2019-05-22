@@ -1,10 +1,10 @@
 const tape = require('tape')
 const level = require('level-mem')
 const promisify = require('util.promisify')
-const Blockchain = require('ethereumjs-blockchain')
-const Block = require('ethereumjs-block')
-const Common = require('ethereumjs-common').default
-const util = require('ethereumjs-util')
+const Blockchain = require('puffscoinjs-blockchain')
+const Block = require('puffscoinjs-block')
+const Common = require('puffscoinjs-common').default
+const util = require('puffscoinjs-util')
 const runBlockchain = require('../../lib/runBlockchain')
 const { StateManager } = require('../../lib/state')
 const { createGenesis } = require('./utils')
